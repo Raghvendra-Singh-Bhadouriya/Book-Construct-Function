@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            text-align: center;
+            margin-top:20%;
+            font-size:300%;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            text-shadow: 3px 3px 5px black;
+        
+        }
+        p:hover{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <p>Constract Function of Book Store</p>
+</body>
+<script>
+    function CreateAuthor(name,birthYear,nationality){
+        this.Name=name;
+        this.BirthYear=birthYear;
+        this.Nationality=nationality;
+    };
+    function CreateBook(title,author,genre,price){
+        this.Title=title;
+        this.Author=author;
+        this.Genre=genre;
+        this.Price=price;
+
+    this.getBookInfo=function(){
+        console.log("Title:",this.Title);
+        console.log("Author:",this.Author.Name);
+        console.log("Genre:",this.Genre);
+        console.log("Price:",this.Price);
+        console.log("---------------------------------------");
+    };
+};
+
+    let Author1=new CreateAuthor("Amish Tripathi",1974,"Bharat");
+    
+    let Author2=new CreateAuthor("Chetan Bhagat",1974,"Bharat");
+    
+    let Author3=new CreateAuthor("Arundhati Roy",1961,"Bharat");
+    
+    let Book1=new CreateBook("Sita: Warrior of Mithila (Ram Chandra Series #2)",Author1," Fiction, Mythology, Fantasy"," Approx. $11 - $16 (paperback)");
+    let Book2=new CreateBook("Five Point Someone",Author2,"Fiction, Comedy, Drama","Approx. $8 - $12 (paperback)");
+    let Book3=new CreateBook("The Ministry of Utmost Happiness",Author3," Fiction, Political Fiction","Approx. $12 - $18 (paperback)");
+    console.log(Author1);
+    Book1.getBookInfo();
+    console.log(Author2);
+    Book2.getBookInfo();
+    console.log(Author3);
+    Book3.getBookInfo();
+</script>
+</html>
